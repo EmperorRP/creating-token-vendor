@@ -23,6 +23,8 @@ contract YourToken is ERC20 {
 }
 ```
 
-We declare a new contract with the name YourToken which inherits the properties of ERC20
+We declare a new contract with the name YourToken which inherits the properties of ERC20. 
+ERC20 is a Ethereum standard which can help generate tokens that are fungible. [More info here](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/)
+You can check out the implementation [here](https://docs.openzeppelin.com/contracts/4.x/erc20)
 
 
