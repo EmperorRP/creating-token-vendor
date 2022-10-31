@@ -33,7 +33,7 @@ The constructor can take in the name (in our case, "TheWeekndCoin") and the deno
 
 Next line shows the approve function which we will come across later.
 
-##Understanding Vendor.sol for buyTokens() function
+## Understanding Vendor.sol for buyTokens() function
 ```solidity
 contract Vendor is Ownable {
 
@@ -60,7 +60,7 @@ contract Vendor is Ownable {
 }
 ```
 
-
+In this contract, I made the buyTokens() function a payable function which essentially transfers the required amount of tokens from the Vendor to the user's wallet. Once that is done, the function emits the event BuyTokens (This event has been declared earlier in the code).
 
 
 
