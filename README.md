@@ -62,5 +62,31 @@ contract Vendor is Ownable {
 
 In this contract, I made the buyTokens() function a payable function which essentially transfers the required amount of tokens from the Vendor to the user's wallet. Once that is done, the function emits the event BuyTokens (This event has been declared earlier in the code).
 
+## withdraw() function
 
+```solidity
+function withdraw() public onlyOwner { 
+    (bool sent, bytes memory data) = msg.sender.call{value: address(this).balance}("");
+    require(sent, "Failed to send user balance back to the owner");
+  }
+```
 
+The withdraw function allows only the owner of the vendor contract to withdraw the funds. So we use onlyOwner modifier from Ownable to make sure that the user who chooses to withdraw is owner only. If the address user is not the owner then we display an error.
+
+## sellTokens(uint256 _amount) function
+
+```solidity
+function sellTokens(uint256 _amount) public {
+    require(_amount > 0, "Please input higher number of tokens");
+
+    (bool sent) = yourToken.transferFrom(msg.sender, address(this), _amount);
+    require(sent, "Failed to transfer tokens from user to vendor");
+
+    uint256 amountOfETHToTransfer = _amount / tokensPerEth;
+
+    (sent,) = msg.sender.call{value: amountOfETHToTransfer}("");
+    require(sent, "Failed to send ETH to the user");
+  }
+```
+
+The sellTokens() function transfers the tokens from the user to the vendor. If tokens are owned by the user, the vendor can accept the payment else there will be an error displayed.
