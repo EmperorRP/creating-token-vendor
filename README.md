@@ -1,7 +1,7 @@
 # Creating a Crypto Token Vendor (theweekndcoin)
 I created a decentralized token that can be used for transactions through a challenge from Scaffold-Eth
 This is the solution for the challenge 2 of Scaffold Eth - creating a token vendor. This particular code passes all the given 6 tests and has been accepted by [speedrunethereum.](https://speedrunethereum.com/)
-> _Please do not copy this code, I suggest you work on your own solution and if necessary, take inspiration from the code that I've written._
+> _Please do not copy this code as is, I suggest you work on your own solution and if necessary, take inspiration from the code that I've written._
 
 The following links will help you find my contracts and transactions:
 
