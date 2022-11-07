@@ -90,3 +90,5 @@ function sellTokens(uint256 _amount) public {
 ```
 
 The sellTokens() function transfers the tokens from the user to the vendor. If tokens are owned by the user, the vendor can accept the payment else there will be an error displayed.
+
+That's it! That's all the code that passes all tests. If you enjoyed that, and want to show me some support, you can send me ETH at 0x04b24656E4B114e4eF83f40a1161d1804e684D89.
